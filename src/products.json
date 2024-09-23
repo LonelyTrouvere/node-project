@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Laptop"
+    },
+    {
+        "id": 2,
+        "name": "Phone"
+    },
+    {
+        "id": 3,
+        "name": "Monitor"
+    },
+    {
+        "id": 4,
+        "name": "Powerbank"
+    },
+    {
+        "id": 5,
+        "name": "PC"
+    }
+]
