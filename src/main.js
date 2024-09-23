@@ -16,7 +16,7 @@ fastify.get('/products/:id', (req, rep) => {
     const id = Number.parseInt(req.params.id)
     const product = products.find(x => x.id === id)
     if(!product){
-        rep.code(404).send({ error: 'Product does not exist' })
+        rep.code(404).send({ error: "Product doen't exist" })
     }
     rep.send(product)
 })
