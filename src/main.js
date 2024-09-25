@@ -12,6 +12,8 @@ fastify.get('/products', (req, rep) => {
     rep.send(products)
 })
 
+fastify.post('/products', (req, rep) => {})
+
 fastify.get('/products/:id', (req, rep) => {
     const id = Number.parseInt(req.params.id)
     const product = products.find(x => x.id === id)
