@@ -1,28 +1,7 @@
-import Fastify from 'fastify'
-import { createRequire } from "module"
+import { build } from './build.js'
 
-const require = createRequire(import.meta.url);
-const products = require("./products.json");
-
-const fastify = Fastify({
+const fastify = build({
   logger: true
-})
-
-fastify.get('/products', (req, rep) => {
-    rep.send(products)
-})
-
-fastify.get('/products/:id', (req, rep) => {
-    const id = Number.parseInt(req.params.id)
-    const product = products.find(x => x.id === id)
-    if(!product){
-        rep.code(404).send({ error: 'Product does not exist' })
-    }
-    rep.send(product)
-})
-
-fastify.get('/', function (request, reply) {
-  reply.send({ hello: 'world' })
 })
 
 fastify.listen({ port: 3000 }, function (err, address) {
