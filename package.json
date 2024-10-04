@@ -6,12 +6,17 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/main.js"
+    "start": "node ./src/main.js",
+    "build": "swc src -d dist --copy-files --strip-leading-paths"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "fastify": "^5.0.0"
+  },
+  "devDependencies": {
+    "@swc/cli": "0.4.1-nightly.20240914",
+    "@swc/core": "^1.7.26"
   }
 }
