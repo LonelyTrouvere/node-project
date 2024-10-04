@@ -22,7 +22,10 @@ jobs:
             - name: Install dependencies
               run: pnpm install
             - run: pnpm build
-            - name: Generate ZIP
-              uses: byteever/action-build-zip@master
+            - name: Archive production artifacts
+              uses: actions/upload-artifact@v4
               with:
-                filename: 'release.zip'
+                name: dist-without-markdown
+                path: |
+                  dist
+                  !dist/**/*.md
