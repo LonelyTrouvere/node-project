@@ -29,3 +29,5 @@ jobs:
                 path: |
                   dist
                   !dist/**/*.md
+            - name: Run test
+              run: pnpm test
