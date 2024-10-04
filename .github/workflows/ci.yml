@@ -31,3 +31,8 @@ jobs:
                   !dist/**/*.md
             - name: Run test
               run: pnpm test
+            - name: Archive test result artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                name: test-result
+                path: .tap/test/*.test.js.tap
