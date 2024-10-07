@@ -11,6 +11,8 @@ export function build(opts={}) {
         rep.send(products)
     })
     
+    app.put('/new-route', {}, (req) => {})
+
     app.get('/products/:id', (req, rep) => {
         const id = Number.parseInt(req.params.id)
         const product = products.find(x => x.id === id)
