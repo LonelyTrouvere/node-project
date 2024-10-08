@@ -11,6 +11,7 @@ export function build(opts={}) {
         rep.send(products)
     })
     
+    // a new route
     app.put('/new-route', {}, (req) => {})
 
     app.get('/products/:id', (req, rep) => {
