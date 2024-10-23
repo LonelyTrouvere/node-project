@@ -30,7 +30,7 @@ services:
     command: 
       - '--config.file=/etc/prometheus/prometheus.yml'
     ports:
-      - '9090:9090'
+      - 9090:9090
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
@@ -44,4 +44,4 @@ services:
     depends_on:
       - prometheus
     ports:
-      - "7246:7246"
+      - 7246:3000
