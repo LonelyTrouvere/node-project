@@ -45,3 +45,17 @@ services:
       - prometheus
     ports:
       - 7246:3000
+  agent:
+    container_name: newrelic-infra
+    build:
+      context: .
+      dockerfile: ./newrelic/newrelic-infra.dockerfile
+    cap_add:
+      - SYS_PTRACE
+    network_mode: host
+    pid: host
+    privileged: true
+    volumes:
+      - "/:/host:ro"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    restart: unless-stopped
