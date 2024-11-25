@@ -172,3 +172,5 @@ test/https/fastify.key
 /test/types/import.js
 
 grafana/data
+
+data
