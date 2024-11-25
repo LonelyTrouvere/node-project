@@ -26,5 +26,5 @@ export const options = {
 };
 export default function () {
   http.get('http://127.0.0.1:3000/');
-  sleep(1);
+  sleep(Math.random() * 5);
 }
